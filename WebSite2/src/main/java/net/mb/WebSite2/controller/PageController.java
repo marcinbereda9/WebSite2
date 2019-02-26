@@ -49,6 +49,14 @@ public class PageController {
 		return mv;
 	}
 
+	@RequestMapping(value = "/custom")
+	public ModelAndView showCustom(){
+		ModelAndView view = new ModelAndView("page");
+		view.addObject("title","Custom");
+		view.addObject("userClickCustom", true);
+		return view;
+	}
+	
 	@RequestMapping(value = "show/category/{id}/products")
 	public ModelAndView showCategoryProducts(@PathVariable("id") int id) {
 		ModelAndView mv = new ModelAndView("page");

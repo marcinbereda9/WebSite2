@@ -64,6 +64,11 @@
 				<%@include file="listProducts.jsp"%>
 			</c:if>
 			
+			<c:if test="${userClickCustom == true}">
+				<%@include file="Custom.jsp" %>
+		 	</c:if>
+			
+			
 		</div>
 		<!-- Footer -->
 		<%@include file="./shared/footer.jsp"%>
