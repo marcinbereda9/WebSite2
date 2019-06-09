@@ -26,13 +26,18 @@
 
 <script>
 	window.menu = '${title}';
+	window.contextRoot = '${contextRoot}';
 </script>
 
 <!-- Bootstrap core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
-
+<link href="${css}/glypicon.css" rel="stylesheet">
 <!-- Bootstrap theme -->
 <link href="${css}/theme.css" rel="stylesheet">
+
+
+<!-- bootstrap data table theme -->
+<link href="${css}/dataTables.bootstrap4.css" rel="stylesheet">
 
 
 <!-- Custom styles for this template -->
@@ -68,16 +73,25 @@
 				<%@include file="Custom.jsp" %>
 		 	</c:if>
 			
+			<c:if test="${userClickShowProduct == true}">
+				<%@include file="singleProduct.jsp" %>
+		 	</c:if>
+			
+			
 			
 		</div>
-		<!-- Footer -->
-		<%@include file="./shared/footer.jsp"%>
+		
 
 		<!-- Bootstrap core JavaScript -->
-		<script src="${js}/jquery.min.js"></script>
-		<script src="${js}/bootstrap.bundle.min.js"></script>
+		<script src="${js}/jquery.js"></script>
+		<script src="${js}/bootstrap.min.js"></script>
+		<script src="${js}/jquery.dataTables.js"></script>
+		<script src="${js}/dataTables.bootstrap4.js"></script>
 		<script src="${js}/myapp.js"></script>
 	</div>
+	<!-- Footer -->
+		<%@include file="./shared/footer.jsp"%>
+	
 </body>
 
 </html>
